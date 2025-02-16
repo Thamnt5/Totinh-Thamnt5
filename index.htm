@@ -1,256 +1,133 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:DengXian;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Segoe UI Symbol";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"\@DengXian";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:0cm;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tá» tÃ¬nh</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #agree {
+            background-color: #ff4d79;
+            color: white;
+            border-radius: 10px;
+        }
+        #disagree {
+            background-color: #ccc;
+            color: black;
+            border-radius: 10px;
+        }
+        /* Style cho popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff4d79;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes heartBeat {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.5); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+        .heart {
+            position: fixed;
+            font-size: 30px;
+            color: red;
+            animation: heartBeat 1s infinite alternate;
+        }
+    </style>
 </head>
-
-<body lang=EN-GB>
-
-<div class=WordSection1>
-
-<p class=MsoNormal>&lt;html lang=&quot;vi&quot;&gt;</p>
-
-<p class=MsoNormal>&lt;head&gt;</p>
-
-<p class=MsoNormal>    &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
-
-<p class=MsoNormal>    &lt;meta name=&quot;viewport&quot;
-content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
-
-<p class=MsoNormal>    &lt;title&gt;T&#7887; tình&lt;/title&gt;</p>
-
-<p class=MsoNormal>    &lt;style&gt;</p>
-
-<p class=MsoNormal>        body {</p>
-
-<p class=MsoNormal>            text-align: center;</p>
-
-<p class=MsoNormal>            font-family: Arial, sans-serif;</p>
-
-<p class=MsoNormal>            margin-top: 50px;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        .btn {</p>
-
-<p class=MsoNormal>            padding: 15px 30px;</p>
-
-<p class=MsoNormal>            font-size: 20px;</p>
-
-<p class=MsoNormal>            border: none;</p>
-
-<p class=MsoNormal>            cursor: pointer;</p>
-
-<p class=MsoNormal>            transition: 0.3s;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        #agree {</p>
-
-<p class=MsoNormal>            background-color: #ff4d79;</p>
-
-<p class=MsoNormal>            color: white;</p>
-
-<p class=MsoNormal>            border-radius: 10px;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        #disagree {</p>
-
-<p class=MsoNormal>            background-color: #ccc;</p>
-
-<p class=MsoNormal>            color: black;</p>
-
-<p class=MsoNormal>            border-radius: 10px;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        /* Style cho popup */</p>
-
-<p class=MsoNormal>        .popup {</p>
-
-<p class=MsoNormal>            display: none;</p>
-
-<p class=MsoNormal>            position: fixed;</p>
-
-<p class=MsoNormal>            top: 50%;</p>
-
-<p class=MsoNormal>            left: 50%;</p>
-
-<p class=MsoNormal>            transform: translate(-50%, -50%);</p>
-
-<p class=MsoNormal>            background: white;</p>
-
-<p class=MsoNormal>            padding: 20px;</p>
-
-<p class=MsoNormal>            border-radius: 10px;</p>
-
-<p class=MsoNormal>            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);</p>
-
-<p class=MsoNormal>            text-align: center;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        .popup button {</p>
-
-<p class=MsoNormal>            margin-top: 10px;</p>
-
-<p class=MsoNormal>            padding: 10px 20px;</p>
-
-<p class=MsoNormal>            border: none;</p>
-
-<p class=MsoNormal>            background-color: #ff4d79;</p>
-
-<p class=MsoNormal>            color: white;</p>
-
-<p class=MsoNormal>            font-size: 16px;</p>
-
-<p class=MsoNormal>            border-radius: 5px;</p>
-
-<p class=MsoNormal>            cursor: pointer;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>    &lt;/style&gt;</p>
-
-<p class=MsoNormal>&lt;/head&gt;</p>
-
-<p class=MsoNormal>&lt;body&gt;</p>
-
-<p class=MsoNormal>    &lt;h2&gt;Anh có r&#7843;nh vào ch&#7911; nh&#7853;t này
-không? <span style='font-family:"Segoe UI Symbol",sans-serif'>&#10084;</span>&#65039;
-&#129392;&lt;/h2&gt;</p>
-
-<p class=MsoNormal>    &lt;button id=&quot;agree&quot; class=&quot;btn&quot;
-onclick=&quot;acceptLove()&quot;&gt;Có ch&#7913;&lt;/button&gt;</p>
-
-<p class=MsoNormal>    &lt;button id=&quot;disagree&quot; class=&quot;btn&quot;
-onclick=&quot;refuseLove()&quot;&gt;Không r&#7843;nh&lt;/button&gt;</p>
-
-<p class=MsoNormal>    &lt;!-- Popup --&gt;</p>
-
-<p class=MsoNormal>    &lt;div id=&quot;popup&quot; class=&quot;popup&quot;&gt;</p>
-
-<p class=MsoNormal>        &lt;p&gt;Tuy&#7879;t v&#7901;i! Mình cùng &#273;i
-ch&#417;i nhé <span style='font-family:"Segoe UI Symbol",sans-serif'>&#10084;</span>&#65039;&lt;/p&gt;</p>
-
-<p class=MsoNormal>        &lt;button onclick=&quot;closePopup()&quot;&gt;OK
-nhaa <span style='font-family:"Segoe UI Symbol",sans-serif'>&#128536;</span>&lt;/button&gt;</p>
-
-<p class=MsoNormal>    &lt;/div&gt;</p>
-
-<p class=MsoNormal>    &lt;script&gt;</p>
-
-<p class=MsoNormal>        let agreeBtn =
-document.getElementById(&quot;agree&quot;);</p>
-
-<p class=MsoNormal>        let disagreeBtn =
-document.getElementById(&quot;disagree&quot;);</p>
-
-<p class=MsoNormal>        let popup =
-document.getElementById(&quot;popup&quot;);</p>
-
-<p class=MsoNormal>        let disagreeCount = 0;</p>
-
-<p class=MsoNormal>        function acceptLove() {</p>
-
-<p class=MsoNormal>            popup.style.display = &quot;block&quot;; // Hi&#7879;n
-popup</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        function closePopup() {</p>
-
-<p class=MsoNormal>            popup.style.display = &quot;none&quot;; // &#7848;n
-popup</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>        function refuseLove() {</p>
-
-<p class=MsoNormal>            let messages = [</p>
-
-<p class=MsoNormal>                &quot;<span lang=VI>Em</span> s&#7869; bu&#7891;n
-&#273;&#7845;y <span style='font-family:"Segoe UI Symbol",sans-serif'>&#128546;</span>&quot;,</p>
-
-<p class=MsoNormal>                &quot;<span lang=VI>Em</span> bu&#7891;n <span
-style='font-family:"Segoe UI Symbol",sans-serif'>&#128557;</span>&quot;,</p>
-
-<p class=MsoNormal>                &quot;<span lang=VI>Em</span> bu&#7891;n l&#7855;m
-<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128532;</span>&quot;,</p>
-
-<p class=MsoNormal>                &quot;<span lang=VI>Em</span> bu&#7891;n mà <span
-lang=VI>h&#7909; h&#7909;</span>&#129402;&quot;</p>
-
-<p class=MsoNormal>            ];</p>
-
-<p class=MsoNormal>            // C&#7853;p nh&#7853;t text theo th&#7913; t&#7921;
-r&#7891;i l&#7863;p l&#7841;i</p>
-
-<p class=MsoNormal>            disagreeBtn.innerText = messages[disagreeCount %
-messages.length];</p>
-
-<p class=MsoNormal>            // T&#259;ng kích th&#432;&#7899;c nút &quot;Có
-ch&#7913;&quot;</p>
-
-<p class=MsoNormal>            agreeBtn.style.fontSize = (20 + disagreeCount *
-5) + &quot;px&quot;;</p>
-
-<p class=MsoNormal>            // T&#259;ng bi&#7871;n &#273;&#7871;m</p>
-
-<p class=MsoNormal>            disagreeCount++;</p>
-
-<p class=MsoNormal>        }</p>
-
-<p class=MsoNormal>    &lt;/script&gt;</p>
-
-<p class=MsoNormal>&lt;/body&gt;</p>
-
-<p class=MsoNormal>&lt;/html&gt;</p>
-
-</div>
-
+<body>
+    <h2>Chá»§ nháº­t nÃ y Anh cÃ³ ráº£nh hÆ¡m? ðŸ¥°</h2>
+
+    <button id="agree" class="btn" onclick="acceptLove()">CÃ³ chá»©</button>
+    <button id="disagree" class="btn" onclick="refuseLove()">KhÃ´ng ráº£nh</button>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <p>Tuyá»‡t vá»i! Váº­y mÃ¬nh cÃ¹ng Ä‘i chÆ¡i nhÃ© â¤ï¸</p>
+        <button onclick="closePopup();"> áº¤u cÆ¡ nhaa ðŸ˜˜</button>
+    </div>
+
+    <script>
+        let agreeBtn = document.getElementById("agree");
+        let disagreeBtn = document.getElementById("disagree");
+        let popup = document.getElementById("popup");
+        let disagreeCount = 0;
+
+        function acceptLove() {
+            popup.style.display = "block"; // Hiá»‡n popup
+        }
+
+        function closePopup() {
+            popup.style.display = "none";
+            createFloatingHearts(); // Gá»i hÃ m táº¡o trÃ¡i tim bay
+        }
+
+        function refuseLove() {
+            let messages = [
+                "Em sáº½ buá»“n Ä‘áº¥y ðŸ˜¢",
+                "Em buá»“n ðŸ˜­",
+                "Em buá»“n láº¯m ðŸ˜”",
+                "Em buá»“n mÃ  há»¥ há»¥ ðŸ¥º"
+            ];
+
+            // Cáº­p nháº­t text theo thá»© tá»± rá»“i láº·p láº¡i
+            disagreeBtn.innerText = messages[disagreeCount % messages.length];
+
+            // TÄƒng kÃ­ch thÆ°á»›c nÃºt "CÃ³ chá»©"
+            agreeBtn.style.fontSize = (20 + disagreeCount * 5) + "px";
+
+            // TÄƒng biáº¿n Ä‘áº¿m
+            disagreeCount++;
+        }
+
+        function createFloatingHearts() {
+            for (let i = 0; i < 10; i++) { // Táº¡o 10 trÃ¡i tim
+                let heart = document.createElement("div");
+                heart.innerHTML = "â¤ï¸";
+                heart.classList.add("heart");
+                
+                // Äáº·t vá»‹ trÃ­ ngáº«u nhiÃªn vá»›i khoáº£ng cÃ¡ch rá»™ng hÆ¡n
+                let xOffset = Math.random() * 1000 - 150; // Dá»‹ch trÃ¡i/pháº£i trong khoáº£ng 1000px
+                let yOffset = Math.random() * 2000 - 100; // Dá»‹ch lÃªn/xuá»‘ng trong khoáº£ng 2000px
+                
+                heart.style.left = `calc(50% + ${xOffset}px)`;
+                heart.style.top = `calc(50% + ${yOffset}px)`;
+                heart.style.position = "fixed";
+                
+                document.body.appendChild(heart);
+                
+                // XÃ³a trÃ¡i tim sau khi animation káº¿t thÃºc
+                setTimeout(() => heart.remove(), 9000);
+            }
+        }
+    </script>
 </body>
-
 </html>
